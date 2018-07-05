@@ -1,0 +1,42 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsps/
+      suffix: .jsp
+  datasource:
+      url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+      username : rzzs
+      password : rzzs
+      driverClassName : oracle.jdbc.driver.OracleDriver
+      type: com.alibaba.druid.pool.DruidDataSource
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000  
+      validationQuery: SELECT 1 FROM DUAL  
+      testWhileIdle: true  
+      testOnBorrow: false  
+      testOnReturn: false  
+      poolPreparedStatements: true  
+      maxPoolPreparedStatementPerConnectionSize: 20  
+      filters: stat,wall,log4j
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+mybatis: 
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.spring.domain
+server: 
+  port: 80
+  jsp-servlet:  
+    init-parameters:
+      development: true
+logging:
+  config: classpath:logback-boot.xml
+pagehelper:
+    helperDialect: Oracle
+    reasonable: true
+    supportMethodsArguments: true
+    pageSizeZero: true
+    params: count=countSql
+ 

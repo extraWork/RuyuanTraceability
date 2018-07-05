@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复杂表头 - 数据表格</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../layuiadmin/style/admin.css" media="all">
+</head>
+<body layadmin-themealias="default">
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+        <a lay-href="">主页</a><span lay-separator="">/</span>
+        <a><cite>组件</cite></a><span lay-separator="">/</span>
+        <a><cite>数据表格</cite></a><span lay-separator="">/</span>
+        <a><cite>复杂表头</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">复杂表头</div>
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>常用两级表头</legend>
+                    </fieldset>
+
+                    <table class="layui-table" lay-data="{width:800, page: true, limit: 6, limits:[6]}"
+                           lay-filter="test-table-thead1" style="display: none;">
+                        <thead>
+                        <tr>
+                            <th lay-data="{checkbox:true, fixed:'left'}" rowspan="2"></th>
+                            <th lay-data="{field:'username', width:150}" rowspan="2">联系人</th>
+                            <th lay-data="{align:'center'}" colspan="3">地址</th>
+                            <th lay-data="{field:'amount', width:120}" rowspan="2">金额</th>
+                            <th lay-data="{fixed: 'right', width: 160, align: 'center', toolbar: '#test-table-thead-barDemo'}"
+                                rowspan="2">操作
+                            </th>
+                        </tr>
+                        <tr>
+                            <th lay-data="{field:'province', width:120}">省</th>
+                            <th lay-data="{field:'city', width:120}">市</th>
+                            <th lay-data="{field:'zone', width:200}">区</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <div class="layui-form layui-border-box layui-table-view" lay-filter="LAY-table-3"
+                         style="width:800px; ">
+                        <div class="layui-table-box">
+                            <div class="layui-table-header">
+                                <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                    <thead>
+                                    <tr>
+                                        <th data-field="0" rowspan="2" data-unresize="true">
+                                            <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                <input type="checkbox" name="layTableCheckbox" lay-skin="primary"
+                                                       lay-filter="layTableAllChoose">
+                                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i
+                                                        class="layui-icon layui-icon-ok"></i></div>
+                                            </div>
+                                        </th>
+                                        <th data-field="username" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-3-username"><span>联系人</span>
+                                            </div>
+                                        </th>
+                                        <th data-field="2" colspan="3">
+                                            <div class="layui-table-cell laytable-cell-group" align="center">
+                                                <span>地址</span></div>
+                                        </th>
+                                        <th data-field="amount" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-3-amount"><span>金额</span></div>
+                                        </th>
+                                        <th data-field="4" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-3-4" align="center">
+                                                <span>操作</span></div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th data-field="province">
+                                            <div class="layui-table-cell laytable-cell-3-province"><span>省</span></div>
+                                        </th>
+                                        <th data-field="city">
+                                            <div class="layui-table-cell laytable-cell-3-city"><span>市</span></div>
+                                        </th>
+                                        <th data-field="zone">
+                                            <div class="layui-table-cell laytable-cell-3-zone"><span>区</span></div>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="layui-table-body layui-table-main">
+                                <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                    <tbody>
+                                    <tr data-index="0">
+                                        <td data-field="0">
+                                            <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i
+                                                        class="layui-icon layui-icon-ok"></i></div>
+                                            </div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-3-username">张小三</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-3-province">浙江</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-3-city">杭州</div>
+                                        </td>
+                                        <td data-field="zone">
+                                            <div class="layui-table-cell laytable-cell-3-zone">西湖区</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-3-amount">18</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-3-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="1" class="">
+                                        <td data-field="0">
+                                            <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i
+                                                        class="layui-icon layui-icon-ok"></i></div>
+                                            </div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-3-username">李小四</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-3-province">江苏</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-3-city">苏州</div>
+                                        </td>
+                                        <td data-field="zone">
+                                            <div class="layui-table-cell laytable-cell-3-zone">姑苏区</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-3-amount">39</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-3-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="2" class="">
+                                        <td data-field="0">
+                                            <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i
+                                                        class="layui-icon layui-icon-ok"></i></div>
+                                            </div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-3-username">王小五</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-3-province">江西</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-3-city">南昌</div>
+                                        </td>
+                                        <td data-field="zone">
+                                            <div class="layui-table-cell laytable-cell-3-zone">青山湖区</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-3-amount">8</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-3-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="3">
+                                        <td data-field="0">
+                                            <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i
+                                                        class="layui-icon layui-icon-ok"></i></div>
+                                            </div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-3-username">赵小六</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-3-province">福建</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-3-city">泉州</div>
+                                        </td>
+                                        <td data-field="zone">
+                                            <div class="layui-table-cell laytable-cell-3-zone">丰泽区</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-3-amount">16</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-3-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="4" class="">
+                                        <td data-field="0">
+                                            <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i
+                                                        class="layui-icon layui-icon-ok"></i></div>
+                                            </div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-3-username">孙小七</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-3-province">湖北</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-3-city">武汉</div>
+                                        </td>
+                                        <td data-field="zone">
+                                            <div class="layui-table-cell laytable-cell-3-zone">武昌区</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-3-amount">12</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-3-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="5" class="">
+                                        <td data-field="0">
+                                            <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i
+                                                        class="layui-icon layui-icon-ok"></i></div>
+                                            </div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-3-username">周小八</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-3-province">安徽</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-3-city">黄山</div>
+                                        </td>
+                                        <td data-field="zone">
+                                            <div class="layui-table-cell laytable-cell-3-zone">黄山区</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-3-amount">11</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-3-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="layui-table-fixed layui-table-fixed-l">
+                                <div class="layui-table-header">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                        <thead>
+                                        <tr>
+                                            <th data-field="0" rowspan="2" data-unresize="true" style="height: 76px;">
+                                                <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                    <input type="checkbox" name="layTableCheckbox" lay-skin="primary"
+                                                           lay-filter="layTableAllChoose">
+                                                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+                                                        <i class="layui-icon layui-icon-ok"></i></div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr></tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="layui-table-body" style="height: auto;">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                        <tbody>
+                                        <tr data-index="0">
+                                            <td data-field="0">
+                                                <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                    <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+                                                        <i class="layui-icon layui-icon-ok"></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="1" class="">
+                                            <td data-field="0">
+                                                <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                    <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+                                                        <i class="layui-icon layui-icon-ok"></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="2" class="">
+                                            <td data-field="0">
+                                                <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                    <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+                                                        <i class="layui-icon layui-icon-ok"></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="3">
+                                            <td data-field="0">
+                                                <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                    <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+                                                        <i class="layui-icon layui-icon-ok"></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="4" class="">
+                                            <td data-field="0">
+                                                <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                    <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+                                                        <i class="layui-icon layui-icon-ok"></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="5" class="">
+                                            <td data-field="0">
+                                                <div class="layui-table-cell laytable-cell-3-0 laytable-cell-checkbox">
+                                                    <input type="checkbox" name="layTableCheckbox" lay-skin="primary">
+                                                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+                                                        <i class="layui-icon layui-icon-ok"></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="layui-table-fixed layui-table-fixed-r" style="right: -1px;">
+                                <div class="layui-table-header">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                        <thead>
+                                        <tr>
+                                            <th data-field="4" rowspan="2" style="height: 76px;">
+                                                <div class="layui-table-cell laytable-cell-3-4" align="center">
+                                                    <span>操作</span></div>
+                                            </th>
+                                        </tr>
+                                        <tr></tr>
+                                        </thead>
+                                    </table>
+                                    <div class="layui-table-mend"></div>
+                                </div>
+                                <div class="layui-table-body" style="height: auto;">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                        <tbody>
+                                        <tr data-index="0">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-3-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="1" class="">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-3-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="2" class="">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-3-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="3">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-3-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="4" class="">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-3-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="5" class="">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-3-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-table-page">
+                            <div id="layui-table-page3">
+                                <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1"><a
+                                        href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0"><i
+                                        class="layui-icon"></i></a><span class="layui-laypage-curr"><em
+                                        class="layui-laypage-em"></em><em>1</em></span><a href="javascript:;"
+                                                                                          data-page="2">2</a><a
+                                        href="javascript:;" data-page="3">3</a><span
+                                        class="layui-laypage-spr">…</span><a href="javascript:;"
+                                                                             class="layui-laypage-last" title="尾页"
+                                                                             data-page="11">11</a><a href="javascript:;"
+                                                                                                     class="layui-laypage-next"
+                                                                                                     data-page="2"><i
+                                        class="layui-icon"></i></a><span class="layui-laypage-skip">到第<input
+                                        type="text" min="1" value="1" class="layui-input">页<button type="button"
+                                                                                                   class="layui-laypage-btn">确定</button></span><span
+                                        class="layui-laypage-count">共 66 条</span><span
+                                        class="layui-laypage-limits"><select lay-ignore=""><option value="6"
+                                                                                                   selected="">6 条/页</option></select></span>
+                                </div>
+                            </div>
+                        </div>
+                        <style>.laytable-cell-3-0 {
+                            width: 48px;
+                        }
+
+                        .laytable-cell-3-username {
+                            width: 150px;
+                        }
+
+                        .laytable-cell-3-2 {
+                        }
+
+                        .laytable-cell-3-amount {
+                            width: 120px;
+                        }
+
+                        .laytable-cell-3-4 {
+                            width: 160px;
+                        }
+
+                        .laytable-cell-3-province {
+                            width: 120px;
+                        }
+
+                        .laytable-cell-3-city {
+                            width: 120px;
+                        }
+
+                        .laytable-cell-3-zone {
+                            width: 200px;
+                        }</style>
+                    </div>
+
+                    <br>
+
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>更多级表头（可以无限极）</legend>
+                    </fieldset>
+                    <table class="layui-table" lay-data="{cellMinWidth: 80, page: true}" lay-filter="test-table-thead1"
+                           style="display: none;">
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'username', width:80}" rowspan="3">联系人</th>
+                            <th lay-data="{field:'amount', width:120}" rowspan="3">金额</th>
+                            <th lay-data="{align:'center'}" colspan="5">地址1</th>
+                            <th lay-data="{align:'center'}" colspan="2">地址2</th>
+                            <th lay-data="{fixed: 'right', width: 160, align: 'center', toolbar: '#test-table-thead-barDemo'}"
+                                rowspan="3">操作
+                            </th>
+                        </tr>
+                        <tr>
+                            <th lay-data="{field:'province'}" rowspan="2">省</th>
+                            <th lay-data="{field:'city'}" rowspan="2">市</th>
+                            <th lay-data="{align:'center'}" colspan="3">详细</th>
+                            <th lay-data="{field:'province'}" rowspan="2">省</th>
+                            <th lay-data="{field:'city'}" rowspan="2">市</th>
+                        </tr>
+                        <tr>
+                            <th lay-data="{field:'street'}" rowspan="2">街道</th>
+                            <th lay-data="{field:'address'}">小区</th>
+                            <th lay-data="{field:'house'}">单元</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <div class="layui-form layui-border-box layui-table-view" lay-filter="LAY-table-4" style=" ">
+                        <div class="layui-table-box">
+                            <div class="layui-table-header">
+                                <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                    <thead>
+                                    <tr>
+                                        <th data-field="username" rowspan="3">
+                                            <div class="layui-table-cell laytable-cell-4-username"><span>联系人</span>
+                                            </div>
+                                        </th>
+                                        <th data-field="amount" rowspan="3">
+                                            <div class="layui-table-cell laytable-cell-4-amount"><span>金额</span></div>
+                                        </th>
+                                        <th data-field="2" colspan="5">
+                                            <div class="layui-table-cell laytable-cell-group" align="center">
+                                                <span>地址1</span></div>
+                                        </th>
+                                        <th data-field="3" colspan="2">
+                                            <div class="layui-table-cell laytable-cell-group" align="center">
+                                                <span>地址2</span></div>
+                                        </th>
+                                        <th data-field="4" rowspan="3">
+                                            <div class="layui-table-cell laytable-cell-4-4" align="center">
+                                                <span>操作</span></div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th data-field="province" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-4-province"><span>省</span></div>
+                                        </th>
+                                        <th data-field="city" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-4-city"><span>市</span></div>
+                                        </th>
+                                        <th data-field="2" colspan="3">
+                                            <div class="layui-table-cell laytable-cell-group" align="center">
+                                                <span>详细</span></div>
+                                        </th>
+                                        <th data-field="province" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-4-province"><span>省</span></div>
+                                        </th>
+                                        <th data-field="city" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-4-city"><span>市</span></div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th data-field="street" rowspan="2">
+                                            <div class="layui-table-cell laytable-cell-4-street"><span>街道</span></div>
+                                        </th>
+                                        <th data-field="address">
+                                            <div class="layui-table-cell laytable-cell-4-address"><span>小区</span></div>
+                                        </th>
+                                        <th data-field="house">
+                                            <div class="layui-table-cell laytable-cell-4-house"><span>单元</span></div>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="layui-table-body layui-table-main">
+                                <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                    <tbody>
+                                    <tr data-index="0">
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-4-username">张小三</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-4-amount">18</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">浙江</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">杭州</div>
+                                        </td>
+                                        <td data-field="street">
+                                            <div class="layui-table-cell laytable-cell-4-street">西溪街道</div>
+                                        </td>
+                                        <td data-field="address">
+                                            <div class="layui-table-cell laytable-cell-4-address">西溪花园</div>
+                                        </td>
+                                        <td data-field="house">
+                                            <div class="layui-table-cell laytable-cell-4-house">30栋1单元</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">浙江</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">杭州</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-4-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="1">
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-4-username">李小四</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-4-amount">39</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">江苏</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">苏州</div>
+                                        </td>
+                                        <td data-field="street">
+                                            <div class="layui-table-cell laytable-cell-4-street">丝绸路</div>
+                                        </td>
+                                        <td data-field="address">
+                                            <div class="layui-table-cell laytable-cell-4-address">天墅之城</div>
+                                        </td>
+                                        <td data-field="house">
+                                            <div class="layui-table-cell laytable-cell-4-house">9幢2单元</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">江苏</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">苏州</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-4-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="2">
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-4-username">王小五</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-4-amount">8</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">江西</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">南昌</div>
+                                        </td>
+                                        <td data-field="street">
+                                            <div class="layui-table-cell laytable-cell-4-street">艾溪湖办事处</div>
+                                        </td>
+                                        <td data-field="address">
+                                            <div class="layui-table-cell laytable-cell-4-address">中兴和园</div>
+                                        </td>
+                                        <td data-field="house">
+                                            <div class="layui-table-cell laytable-cell-4-house">1幢3单元</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">江西</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">南昌</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-4-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="3">
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-4-username">赵小六</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-4-amount">16</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">福建</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">泉州</div>
+                                        </td>
+                                        <td data-field="street">
+                                            <div class="layui-table-cell laytable-cell-4-street">南洋街道</div>
+                                        </td>
+                                        <td data-field="address">
+                                            <div class="layui-table-cell laytable-cell-4-address">南洋村</div>
+                                        </td>
+                                        <td data-field="house">
+                                            <div class="layui-table-cell laytable-cell-4-house">6幢1单元</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">福建</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">泉州</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-4-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="4">
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-4-username">孙小七</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-4-amount">12</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">湖北</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">武汉</div>
+                                        </td>
+                                        <td data-field="street">
+                                            <div class="layui-table-cell laytable-cell-4-street">武昌大道</div>
+                                        </td>
+                                        <td data-field="address">
+                                            <div class="layui-table-cell laytable-cell-4-address">两湖花园</div>
+                                        </td>
+                                        <td data-field="house">
+                                            <div class="layui-table-cell laytable-cell-4-house">16幢2单元</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">湖北</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">武汉</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-4-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="5">
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-4-username">周小八</div>
+                                        </td>
+                                        <td data-field="amount">
+                                            <div class="layui-table-cell laytable-cell-4-amount">11</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">安徽</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">黄山</div>
+                                        </td>
+                                        <td data-field="street">
+                                            <div class="layui-table-cell laytable-cell-4-street">汤口镇</div>
+                                        </td>
+                                        <td data-field="address">
+                                            <div class="layui-table-cell laytable-cell-4-address">温泉村</div>
+                                        </td>
+                                        <td data-field="house">
+                                            <div class="layui-table-cell laytable-cell-4-house">21号</div>
+                                        </td>
+                                        <td data-field="province">
+                                            <div class="layui-table-cell laytable-cell-4-province">安徽</div>
+                                        </td>
+                                        <td data-field="city">
+                                            <div class="layui-table-cell laytable-cell-4-city">黄山</div>
+                                        </td>
+                                        <td data-field="4" align="center" data-off="true">
+                                            <div class="layui-table-cell laytable-cell-4-4"><a
+                                                    class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                                                <a class="layui-btn layui-btn-primary layui-btn-xs"
+                                                   lay-event="edit">按钮2</a></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="layui-table-fixed layui-table-fixed-r layui-hide" style="right: -1px;">
+                                <div class="layui-table-header">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                        <thead>
+                                        <tr>
+                                            <th data-field="4" rowspan="3" style="height: 114px;">
+                                                <div class="layui-table-cell laytable-cell-4-4" align="center">
+                                                    <span>操作</span></div>
+                                            </th>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr></tr>
+                                        </thead>
+                                    </table>
+                                    <div class="layui-table-mend"></div>
+                                </div>
+                                <div class="layui-table-body" style="height: auto;">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                        <tbody>
+                                        <tr data-index="0">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-4-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="1">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-4-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="2">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-4-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="3">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-4-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="4">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-4-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="5">
+                                            <td data-field="4" align="center" data-off="true">
+                                                <div class="layui-table-cell laytable-cell-4-4"><a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="detail">按钮1</a> <a
+                                                        class="layui-btn layui-btn-primary layui-btn-xs"
+                                                        lay-event="edit">按钮2</a></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-table-page">
+                            <div id="layui-table-page4">
+                                <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-2"><a
+                                        href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0"><i
+                                        class="layui-icon"></i></a><span class="layui-laypage-curr"><em
+                                        class="layui-laypage-em"></em><em>1</em></span><a href="javascript:;"
+                                                                                          data-page="2">2</a><a
+                                        href="javascript:;" data-page="3">3</a><span
+                                        class="layui-laypage-spr">…</span><a href="javascript:;"
+                                                                             class="layui-laypage-last" title="尾页"
+                                                                             data-page="7">7</a><a href="javascript:;"
+                                                                                                   class="layui-laypage-next"
+                                                                                                   data-page="2"><i
+                                        class="layui-icon"></i></a><span class="layui-laypage-skip">到第<input
+                                        type="text" min="1" value="1" class="layui-input">页<button type="button"
+                                                                                                   class="layui-laypage-btn">确定</button></span><span
+                                        class="layui-laypage-count">共 66 条</span><span
+                                        class="layui-laypage-limits"><select lay-ignore=""><option value="10"
+                                                                                                   selected="">10 条/页</option><option
+                                        value="20">20 条/页</option><option value="30">30 条/页</option><option value="40">40 条/页</option><option
+                                        value="50">50 条/页</option><option value="60">60 条/页</option><option value="70">70 条/页</option><option
+                                        value="80">80 条/页</option><option value="90">90 条/页</option></select></span>
+                                </div>
+                            </div>
+                        </div>
+                        <style>.laytable-cell-4-username {
+                            width: 80px;
+                        }
+
+                        .laytable-cell-4-amount {
+                            width: 120px;
+                        }
+
+                        .laytable-cell-4-2 {
+                        }
+
+                        .laytable-cell-4-3 {
+                        }
+
+                        .laytable-cell-4-4 {
+                            width: 160px;
+                        }
+
+                        .laytable-cell-4-province {
+                            width: 155px;
+                        }
+
+                        .laytable-cell-4-city {
+                            width: 155px;
+                        }
+
+                        .laytable-cell-4-2 {
+                        }
+
+                        .laytable-cell-4-province {
+                            width: 155px;
+                        }
+
+                        .laytable-cell-4-city {
+                            width: 155px;
+                        }
+
+                        .laytable-cell-4-street {
+                            width: 155px;
+                        }
+
+                        .laytable-cell-4-address {
+                            width: 155px;
+                        }
+
+                        .laytable-cell-4-house {
+                            width: 155px;
+                        }</style>
+                    </div>
+
+                    <script type="text/html" id="test-table-thead-barDemo">
+                        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">按钮1</a>
+                        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">按钮2</a>
+                    </script>
+
+                    <br>
+                    <blockquote class="layui-elem-quote">注：上述例子读取的均是静态模拟数据</blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../../layuiadmin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../../layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'table'], function () {
+        var table = layui.table;
+
+        table.init('test-table-thead1', {
+            url: layui.setter.base + 'json/table/demo2.js'
+        });
+
+        table.init('test-table-thead2', {
+            url: layui.setter.base + 'json/table/demo2.js'
+        });
+
+    });
+</script>
+
+<style id="LAY_layadmin_theme">.layui-side-menu, .layadmin-pagetabs .layui-tab-title li:after, .layadmin-pagetabs .layui-tab-title li.layui-this:after, .layui-layer-admin .layui-layer-title, .layadmin-side-shrink .layui-side-menu .layui-nav > .layui-nav-item > .layui-nav-child {
+    background-color: #20222A !important;
+}
+
+.layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a {
+    background-color: #009688 !important;
+}
+
+.layui-layout-admin .layui-logo {
+    background-color: #20222A !important;
+}</style>
+</body>
+</html>

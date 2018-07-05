@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置初始排序 - 数据表格</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../layuiadmin/style/admin.css" media="all">
+</head>
+<body layadmin-themealias="default">
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+        <a lay-href="">主页</a><span lay-separator="">/</span>
+        <a><cite>组件</cite></a><span lay-separator="">/</span>
+        <a><cite>数据表格</cite></a><span lay-separator="">/</span>
+        <a><cite>设置初始排序</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">设置初始排序</div>
+                <div class="layui-card-body">
+                    <table class="layui-hide" id="test-table-initSort"></table>
+                    <div class="layui-form layui-border-box layui-table-view" lay-filter="LAY-table-1"
+                         style=" height:313px;">
+                        <div class="layui-table-box">
+                            <div class="layui-table-header">
+                                <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                    <thead>
+                                    <tr>
+                                        <th data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id"><span>ID</span></div>
+                                        </th>
+                                        <th data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username"><span>用户名</span>
+                                            </div>
+                                        </th>
+                                        <th data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score"><span>评分</span><span
+                                                    class="layui-table-sort layui-inline"><i
+                                                    class="layui-edge layui-table-sort-asc"></i><i
+                                                    class="layui-edge layui-table-sort-desc"></i></span></div>
+                                        </th>
+                                        <th data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth"><span>财富</span><span
+                                                    class="layui-table-sort layui-inline" lay-sort="desc"><i
+                                                    class="layui-edge layui-table-sort-asc"></i><i
+                                                    class="layui-edge layui-table-sort-desc"></i></span></div>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="layui-table-body layui-table-main" style="height: 275px;">
+                                <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                                    <tbody>
+                                    <tr data-index="0">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10009</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-9</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">75</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">86801934</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="1" class="">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10000</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-0</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">57</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">82830700</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="2" class="">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10007</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-7</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">28</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">82030578</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="3" class="">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10004</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-4</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">6</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">76263262</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="4" class="">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10001</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-1</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">27</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">64928690</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="5" class="">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10005</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-5</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">87</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">60344147</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="6" class="">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10006</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-6</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">34</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">57768166</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="7" class="">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10003</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-3</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">68</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">37117017</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="8">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10008</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-8</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">14</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">16503371</div>
+                                        </td>
+                                    </tr>
+                                    <tr data-index="9">
+                                        <td data-field="id">
+                                            <div class="layui-table-cell laytable-cell-1-id">10002</div>
+                                        </td>
+                                        <td data-field="username">
+                                            <div class="layui-table-cell laytable-cell-1-username">user-2</div>
+                                        </td>
+                                        <td data-field="score">
+                                            <div class="layui-table-cell laytable-cell-1-score">31</div>
+                                        </td>
+                                        <td data-field="wealth" data-minwidth="150">
+                                            <div class="layui-table-cell laytable-cell-1-wealth">6298078</div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <style>.laytable-cell-1-id {
+                            width: 80px;
+                        }
+
+                        .laytable-cell-1-username {
+                            width: 80px;
+                        }
+
+                        .laytable-cell-1-score {
+                            width: 80px;
+                        }
+
+                        .laytable-cell-1-wealth {
+                            width: 1231px;
+                        }</style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../../layuiadmin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../../layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'table'], function () {
+        var table = layui.table;
+
+        table.render({
+            elem: '#test-table-initSort'
+            , height: 313
+            , url: layui.setter.base + 'json/table/user.js'
+            , initSort: {
+                field: 'wealth'
+                , type: 'desc'
+            }
+            , cols: [[
+                {field: 'id', title: 'ID', width: 80}
+                , {field: 'username', title: '用户名', width: 80}
+                , {field: 'score', title: '评分', width: 80, sort: true}
+                , {field: 'wealth', title: '财富', sort: true, minWidth: 150}
+            ]]
+        })
+
+    });
+</script>
+
+<style id="LAY_layadmin_theme">.layui-side-menu, .layadmin-pagetabs .layui-tab-title li:after, .layadmin-pagetabs .layui-tab-title li.layui-this:after, .layui-layer-admin .layui-layer-title, .layadmin-side-shrink .layui-side-menu .layui-nav > .layui-nav-item > .layui-nav-child {
+    background-color: #20222A !important;
+}
+
+.layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a {
+    background-color: #009688 !important;
+}
+
+.layui-layout-admin .layui-logo {
+    background-color: #20222A !important;
+}</style>
+</body>
+</html>

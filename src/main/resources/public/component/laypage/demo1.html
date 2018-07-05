@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>功能演示1 - 通用分页组件</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../layuiadmin/style/admin.css" media="all">
+</head>
+<body layadmin-themealias="default">
+
+
+<div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+        <a lay-href="">主页</a><span lay-separator="">/</span>
+        <a><cite>组件</cite></a><span lay-separator="">/</span>
+        <a><cite>分页演示一</cite></a>
+    </div>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">总页数低于页码总数</div>
+                <div class="layui-card-body">
+                    <div id="test-laypage-demo0">
+                        <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span
+                                class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span><a
+                                href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a
+                                href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">总页数大于页码总数</div>
+                <div class="layui-card-body">
+                    <div id="test-laypage-demo1">
+                        <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-2"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span
+                                class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span><a
+                                href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a
+                                href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span
+                                class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last"
+                                                                     title="尾页" data-page="7">7</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">自定义主题 - 颜色随意定义</div>
+                <div class="layui-card-body">
+                    <div id="test-laypage-demo2">
+                        <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-3"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span
+                                class="layui-laypage-curr"><em class="layui-laypage-em"
+                                                               style="background-color:#1E9FFF;"></em><em>1</em></span><a
+                                href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a
+                                href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span
+                                class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last"
+                                                                     title="尾页" data-page="10">10</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                    <div id="test-laypage-demo2-1">
+                        <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-4"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span
+                                class="layui-laypage-curr"><em class="layui-laypage-em"
+                                                               style="background-color:#FF5722;"></em><em>1</em></span><a
+                                href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a
+                                href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span
+                                class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last"
+                                                                     title="尾页" data-page="10">10</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                    <div id="test-laypage-demo2-2">
+                        <div class="layui-box layui-laypage layui-laypage-molv" id="layui-laypage-5"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span
+                                class="layui-laypage-curr"><em class="layui-laypage-em"
+                                                               style="background-color:#FFB800;"></em><em>1</em></span><a
+                                href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a
+                                href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span
+                                class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last"
+                                                                     title="尾页" data-page="10">10</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">自定义首页、尾页、上一页、下一页文本</div>
+                <div class="layui-card-body">
+                    <div id="test-laypage-demo3">
+                        <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-6"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled"
+                                data-page="0"><em>←</em></a><span class="layui-laypage-curr"><em
+                                class="layui-laypage-em"></em><em>1</em></span><a href="javascript:;"
+                                                                                  data-page="2">2</a><a
+                                href="javascript:;" data-page="3">3</a><a href="javascript:;" data-page="4">4</a><a
+                                href="javascript:;" data-page="5">5</a><span class="layui-laypage-spr">…</span><a
+                                href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">尾页</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2"><em>→</em></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">不显示首页尾页</div>
+                <div class="layui-card-body">
+                    <div id="test-laypage-demo4">
+                        <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-7"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span
+                                class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span><a
+                                href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a
+                                href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">开启HASH</div>
+                <div class="layui-card-body">
+                    <div id="test-laypage-demo5">
+                        <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-8"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><span
+                                class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span><a
+                                href="javascript:;" data-page="2">2</a><a href="javascript:;" data-page="3">3</a><a
+                                href="javascript:;" data-page="4">4</a><a href="javascript:;" data-page="5">5</a><span
+                                class="layui-laypage-spr">…</span><a href="javascript:;" class="layui-laypage-last"
+                                                                     title="尾页" data-page="50">50</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">只显示上一页、下一页</div>
+                <div class="layui-card-body">
+                    <div id="test-laypage-demo6">
+                        <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-9"><a
+                                href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a><a
+                                href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../layuiadmin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../../layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'laypage'], function () {
+        var laypage = layui.laypage;
+
+        //总页数低于页码总数
+        laypage.render({
+            elem: 'test-laypage-demo0'
+            , count: 50 //数据总数
+        });
+
+        //总页数大于页码总数
+        laypage.render({
+            elem: 'test-laypage-demo1'
+            , count: 70 //数据总数
+            , jump: function (obj) {
+                console.log(obj)
+            }
+        });
+
+        //自定义样式
+        laypage.render({
+            elem: 'test-laypage-demo2'
+            , count: 100
+            , theme: '#1E9FFF'
+        });
+        laypage.render({
+            elem: 'test-laypage-demo2-1'
+            , count: 100
+            , theme: '#FF5722'
+        });
+        laypage.render({
+            elem: 'test-laypage-demo2-2'
+            , count: 100
+            , theme: '#FFB800'
+        });
+
+        //自定义首页、尾页、上一页、下一页文本
+        laypage.render({
+            elem: 'test-laypage-demo3'
+            , count: 100
+            , first: '首页'
+            , last: '尾页'
+            , prev: '<em>←</em>'
+            , next: '<em>→</em>'
+        });
+
+        //不显示首页尾页
+        laypage.render({
+            elem: 'test-laypage-demo4'
+            , count: 100
+            , first: false
+            , last: false
+        });
+
+        //开启HASH
+        laypage.render({
+            elem: 'test-laypage-demo5'
+            , count: 500
+            , curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
+            , hash: 'fenye' //自定义hash值
+        });
+
+        //只显示上一页、下一页
+        laypage.render({
+            elem: 'test-laypage-demo6'
+            , count: 50
+            , layout: ['prev', 'next']
+            , jump: function (obj, first) {
+                if (!first) {
+                    layer.msg('第 ' + obj.curr + ' 页');
+                }
+            }
+        });
+
+    });
+</script>
+<style id="LAY_layadmin_theme">.layui-side-menu, .layadmin-pagetabs .layui-tab-title li:after, .layadmin-pagetabs .layui-tab-title li.layui-this:after, .layui-layer-admin .layui-layer-title, .layadmin-side-shrink .layui-side-menu .layui-nav > .layui-nav-item > .layui-nav-child {
+    background-color: #20222A !important;
+}
+
+.layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a {
+    background-color: #009688 !important;
+}
+
+.layui-layout-admin .layui-logo {
+    background-color: #20222A !important;
+}</style>
+</body>
+</html>

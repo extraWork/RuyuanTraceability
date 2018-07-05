@@ -1,0 +1,63 @@
+.framework_titlebar {
+	background: url(../images/titlebar_bg.png) repeat-x;
+	height: 58px;
+	width: 100%;
+	margin: 0 0 0px 0px;
+	border: 0px;
+}
+
+.framework_titlebar_logo_bg {
+	//×ªÕï±³¾°
+	background: url(../images/titlebar_logo_bg_zz.png) no-repeat;
+	//background: url(../images/titlebar_logo_bg.png) no-repeat;
+	width: 931px;
+	height: 58px;
+	float: left;
+	margin: 0 0 0px 0px;
+}
+.framework_titlebar_logo {
+	//×ªÕïlog
+	background: url(../images/titlebar_logo_zz.png) no-repeat;
+	//	background: url(../images/titlebar_logo.png) no-repeat;
+	width: 453px;
+	height: 58px;
+	margin: 0 0 0px 0px;
+	float: left;
+}
+
+.framework_titlebar_toolbar_container {
+	font-size: 12px;
+	color: #FFF;
+	float: right;
+	height: 58px;
+	width: auto;
+	position: absolute;
+	right: 0;
+	margin-top:24px;
+	margin-right:10px;
+}
+
+.framework_titlebar_toolbar {
+    background: url("") repeat-x scroll 0 0 transparent;
+    height: 29px;	
+}
+
+.framework_titlebar_toolbar .x-btn-over button {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.framework_titlebar_toolbar_item {
+	font-size: 12px;
+	color: #FFF;
+}
+
+.framework_titlebar_toolbar_item .x-btn-tl,.framework_titlebar_toolbar_item .x-btn-tr,.framework_titlebar_toolbar_item .x-btn-tc,.framework_titlebar_toolbar_item .x-btn-ml,.framework_titlebar_toolbar_item .x-btn-mr,.framework_titlebar_toolbar_item .x-btn-mc,.framework_titlebar_toolbar_item .x-btn-bl,.framework_titlebar_toolbar_item .x-btn-br,.framework_titlebar_toolbar_item .x-btn-bc
+	{
+	background-image: url("");
+}
+
+.framework_titlebar_toolbar_item button {
+	font-size: 12px;
+	color: #FFF;
+}
