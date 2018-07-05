@@ -46,6 +46,11 @@ public class ModuleController {
 		moduleService.saveSystemModule(moduleInfo);
 		return systemModuleJump(model, request);
 	}
+	@RequestMapping(value = "/editSystemModule", method = RequestMethod.GET)
+	public String editSystemModule(ModuleInfo moduleInfo,Model model , HttpServletRequest request) {
+		moduleService.editSystemModule(moduleInfo);
+		return systemModuleJump(model, request);
+	}
 	
 	
 	
@@ -67,5 +72,17 @@ public class ModuleController {
 			nodeList.add(node);
 		}
 		return TreeUtil.bulid(nodeList);
+	}
+	
+	@RequestMapping(value = "/findModuleById", method = RequestMethod.POST)
+    @ResponseBody
+	public ModuleInfo findModuleById(String moduleId) {
+		 return moduleService.findModuleById(moduleId);
+	}
+	@RequestMapping(value = "/deleteModule", method = RequestMethod.POST)
+    @ResponseBody
+	public String deleteModule(String moduleId) {
+		 moduleService.deleteModule(moduleId);
+		 return "success";
 	}
 }

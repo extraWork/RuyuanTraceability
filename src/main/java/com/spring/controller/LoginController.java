@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring.domain.ModuleInfo;
 import com.spring.domain.TreeNode;
@@ -27,7 +28,7 @@ public class LoginController {
 	private ModuleService moduleService;
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String loginJump(){
-		return "login";
+		return "login2";
 	}
 	
 	@RequestMapping(value = "login", method = RequestMethod.POST)
@@ -41,7 +42,7 @@ public class LoginController {
 		HttpSession session = request.getSession();
 		session.setAttribute("menu", moduleList);
 		session.setAttribute("user", user);
-		return "index";
+		return "redirect:/index";
 	}
 	
 }

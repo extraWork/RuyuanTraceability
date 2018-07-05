@@ -21,7 +21,7 @@
 		<div class="layui-col-md12">
 			<div class="layui-btn-group test-table-operate-btn">
 		  		<button class="layui-btn" id="addModule">新增</button>
-		  		<button class="layui-btn" onclick="query()">刷新</button>
+		  		<button class="layui-btn" id="reload">刷新</button>
 		  	</div>
 		</div>
   		<div class="layui-col-md12">
@@ -42,7 +42,7 @@
 					        <td>${item.moduleURL}</td>
 					        <td>${item.moduleType}</td>
 					        <td>${item.moduleNo}</td>
-					        <td><button class="layui-btn layui-btn-sm" onclick="editModule('${item.moduleId}','${item.moduleName}','${item.moduleURL}','${item.moduleType}','${item.moduleNo}','${item.moduleParent}')">编辑</button><button class="layui-btn layui-btn-sm" onclick="query()">删除</button>
+					        <td><button class="layui-btn layui-btn-sm" onclick="editModule('${item.moduleId}')">编辑</button><button class="layui-btn layui-btn-sm" onclick="deleteModule('${item.moduleId}')">删除</button>
 		  					</td>
 				    	</tr>
 			    	</c:forEach>
@@ -66,7 +66,7 @@
 		      	<div class="layui-select-title">
 		      		<input id="topMenuInput" type="text" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i>
 		      		<input id="moduleParent" name="moduleParent" style="display:none" >
-		      		<input id="moduleId" name="moduleId" style="display:none" >
+		      		<input id="moduleId" name="moduleId" value="0" style="display:none" >
 		      	</div>
 	      	  </div>
 		    </div>
@@ -130,7 +130,7 @@
         	  					$.each(data,function(i, item) {
         	  						html += '<tr hasChild="true" id="'+item.moduleId+'" pId="'+item.moduleParent+'">'
         	  						+'<td>'+item.moduleName+'</td><td>'+item.moduleURL+'</td><td>'+item.moduleType+'</td><td>'+item.moduleNo+'</td>'
-        	  						+'<td><button class="layui-btn layui-btn-sm" onclick="editModule(\''+item.moduleId+'\',\''+item.moduleName+'\',\''+item.moduleURL+'\',\''+item.moduleType+'\',\''+item.moduleNo+'\',\''+item.moduleParent+'\')">编辑</button><button class="layui-btn layui-btn-sm" onclick="query()">删除</button></td></tr>';
+        	  						+'<td><button class="layui-btn layui-btn-sm" onclick="editModule(\''+item.moduleId+'\')">编辑</button><button class="layui-btn layui-btn-sm" onclick="deleteModule(\''+item.moduleId+'\')">删除</button></td></tr>';
         	  					});
                     			$treeTable.addChilds(html);
         	  				}
@@ -220,19 +220,44 @@
         	$("#topMenuInput").blur(function(){
         		setTimeout('blurSelect()', 150);
         	});
-        	function editModule(){
-        		alert();
-        	}
+        	
+        	$("#reload").click(function(){
+        		window.location.href='/module/systemModuleJump';
+        	});
         });
+        
+        function deleteModule(moduleId){
+        	//topMenuInput
+			layui.config({
+	            base: '../../layuiadmin/' //静态资源所在路径
+	        }).use(['laydate','form','table','jquery'], function(){
+	        	var laydate = layui.laydate,
+	         	  form = layui.form,
+	         	  table = layui.table,
+	         	  $ = layui.jquery;
+	        	layer.confirm('是否确认删除?', {
+	    			btn: ['确认','关闭'] //按钮
+	    		}, function(index){
+	    			$.ajax({
+		 	  			type: "POST",
+		 	  			url : "/module/deleteModule",
+		 	  			dataType: "text",
+		 	  			data : {
+		 	  				moduleId: moduleId
+		 				},
+		 	  			success : function(data) {
+		 	  				window.location.href='/module/systemModuleJump';
+		 	  			}
+		 	  		});
+	    		}, function(index){
+	    			layer.close(index);
+	    		});
+	        });
+        }
+        
         //编辑
-        function editModule(moduleId,moduleName,moduleURL,moduleType,moduleNo,moduleParent){
-			$("#moduleId").val(moduleId);
-			$("#moduleName").val(moduleName);
-			$("#moduleURL").val(moduleURL);
-			$("#moduleType").val(moduleType);
-			$("#moduleNo").val(moduleNo);
-			$("#moduleParent").val(moduleParent);
-			<input id="topMenuInput" type="text" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i>
+        function editModule(moduleId){
+			//topMenuInput
 			layui.config({
 	            base: '../../layuiadmin/' //静态资源所在路径
 	        }).use(['laydate','form','table','jquery'], function(){
@@ -241,6 +266,23 @@
 	         	  table = layui.table,
 	         	  $ = layui.jquery;
 	        	 form.render();
+	        	 $.ajax({
+	 	  			type: "POST",
+	 	  			url : "/module/findModuleById",
+	 	  			dataType: "json",
+	 	  			data : {
+	 	  				moduleId: moduleId
+	 				},
+	 	  			success : function(data) {
+	 	  				$("#moduleId").val(data.moduleId);
+	 	  				$("#moduleName").val(data.moduleName);
+	 	  				$("#moduleURL").val(data.moduleURL);
+	 	  				$("#moduleType").val(data.moduleType);
+	 	  				$("#moduleNo").val(data.moduleNo);
+	 	  				$("#moduleParent").val(data.moduleParent);
+	 	  				$("#topMenuInput").val(data.moduleParentName);
+	 	  			}
+	 	  		});
 	        	$("#moduleForm").attr("action","/module/editSystemModule")
 	        	var tempLayer =  layer.open({
         			title : '编辑模块',

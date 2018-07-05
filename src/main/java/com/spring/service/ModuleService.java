@@ -24,4 +24,20 @@ public interface ModuleService {
 	 * @return
 	 */
 	public List<ModuleInfo> findModuleByRoleId(int roleId);
+	/**
+	 * 修改菜单信息
+	 * @param moduleInfo
+	 */
+	public void editSystemModule(ModuleInfo moduleInfo);
+	/**
+	 * 根据id查询moduleInfo
+	 * @param moduleId
+	 * @return
+	 */
+	public ModuleInfo findModuleById(String moduleId);
+	/**
+	 * 根据id删除数据
+	 * @param moduleId
+	 */
+	public void deleteModule(String moduleId);
 }
