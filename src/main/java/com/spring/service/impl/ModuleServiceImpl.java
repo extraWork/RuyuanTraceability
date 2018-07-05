@@ -31,5 +31,23 @@ public class ModuleServiceImpl implements ModuleService{
 		// TODO Auto-generated method stub
 		return moduleDao.findModuleByRoleId(roleId);
 	}
+
+	@Override
+	public void editSystemModule(ModuleInfo moduleInfo) {
+		// TODO Auto-generated method stub
+		moduleDao.editSystemModule(moduleInfo);
+	}
+
+	@Override
+	public ModuleInfo findModuleById(String moduleId) {
+		// TODO Auto-generated method stub
+		return moduleDao.findModuleById(moduleId);
+	}
+
+	@Override
+	public void deleteModule(String moduleId) {
+		// TODO Auto-generated method stub
+		moduleDao.deleteModule(moduleId);
+	}
 	
 }

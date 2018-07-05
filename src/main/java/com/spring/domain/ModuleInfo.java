@@ -7,11 +7,18 @@ package com.spring.domain;
  */
 public class ModuleInfo {
 	private int moduleId;
-	private String moduleName;
-	private String moduleParent;
-	private String moduleURL;
-	private String moduleNo;
-	private String moduleType;
+	private String moduleName="";
+	private String moduleParent="";
+	private String moduleURL="";
+	private String moduleNo="";
+	private String moduleType="";
+	private String moduleParentName="";
+	public String getModuleParentName() {
+		return moduleParentName;
+	}
+	public void setModuleParentName(String moduleParentName) {
+		this.moduleParentName = moduleParentName;
+	}
 	public int getModuleId() {
 		return moduleId;
 	}
