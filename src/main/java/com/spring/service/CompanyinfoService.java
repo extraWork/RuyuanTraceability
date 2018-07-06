@@ -1,11 +1,14 @@
-package com.spring.dao;
+package com.spring.service;
 
-import com.spring.domain.Companyinfo;
 import java.math.BigDecimal;
 import java.util.List;
 
-public interface CompanyinfoMapper {
-    /**
+import com.spring.domain.Companyinfo;
+import com.spring.domain.UserInfo;
+import com.spring.util.DataGrid;
+
+public interface CompanyinfoService {
+	/**
      * 删除
      * @param companyid
      * @return
@@ -24,7 +27,7 @@ public interface CompanyinfoMapper {
      * @param companyid
      * @return
      */
-    List<Companyinfo> selectByPrimaryKey(Companyinfo record);
+    DataGrid<Companyinfo> selectByPrimaryKey(Companyinfo record,int currentPage, int pageCount);
     
     /**
      * 修改
