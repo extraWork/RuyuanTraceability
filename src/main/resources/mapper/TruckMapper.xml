@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.dao.TruckcompanyMapper">
+  <resultMap id="BaseResultMap" type="com.spring.domain.Truck">
+    <result column="truckid" property="truckid" />
+    <result column="licenseplate" property="licenseplate" />
+    <result column="telephone" property="telephone" />
+    <result column="address" property="address" />
+    <result column="name" property="name" />
+    <result column="weight" property="weight" />
+    <result column="from" property="from" />
+    <result column="qtpcreate" property="qtpcreate" />
+    <result column="qtptime" property="qtptime" />
+    <result column="qtno" property="qtno" />
+    <result column="gpsno" property="gpsno" />
+    <result column="monitorcreate" property="monitorcreate" />
+    <result column="attrbute1" property="attrbute1" />
+    <result column="attrbute2" property="attrbute2" />
+    <result column="attrbute3" property="attrbute3" />
+    <result column="attrbute4" property="attrbute4" />
+    <result column="attrbute5" property="attrbute5" />
+
+  </resultMap>
+
+  <!--新增-->
+   <insert id="insert" parameterType="com.spring.domain.Truck">
+    insert into
+    truck(truckid,licenseplate,telephone,
+    address,truckname,weight,truckfrom,qtpcreate,qtptime,qtno,gpsno,monitorcreate,
+    attribute1,attribute2,attribute3,attribute4,attribute5)
+    values(trunk_seq.Nextval,#{licenseplate},#{licenseplate},
+    #{telephone},#{address},#{truckname},#{weight},#{truckfrom},#{qtpcreate},#{qtptime},#{qtno},#{gpsno},
+    #{monitorcreate},#{attribute1},#{attribute2},#{attribute3},#{attribute4},#{attribute5})
+  </insert>
+
+  <!--查询-->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+    select * from TruckCompany
+    <where>
+      1=1
+      <if test="truckid != null and truckid > 0">
+        and truckid = #{truckid}
+      </if>
+      <if test="licenseplate != null and licenseplate != ''">
+        and licenseplate = #{licenseplate}
+      </if>
+      <if test="truckname != null and truckname != ''">
+        and truckname = #{truckname}
+      </if>
+    </where>
+  </select>
+
+  <!--删除-->
+	<delete id="delete">
+    	delete from truck where truckid in
+	  	<foreach  item='item' index='index' collection="trcks" open="" close="" separator=",">
+	    	(#{truckid})
+	  	</foreach>
+  	</delete>
+  <!--修改-->
+  <update id="update" parameterType="com.spring.domain.Truck">
+    update truck set
+    licenseplate=#{licenseplate},telephone=#{telephone},
+    address=#{address},truckname=#{truckname},weight=#{weight},truckfrom=#{truckfrom},qtpcreate=#{qtpcreate},
+    qtptime=#{qtptime},qtno=#{qtno},gpsno=#{gpsno},monitorcreate=#{monitorcreate},
+    attribute1=#{attribute1},attribute2=#{attribute2},attribute3=#{attribute3}
+    ,attribute4=#{attribute4},attribute5=#{attribute5}
+    where truckid=#{truckid}
+  </update>
+</mapper>

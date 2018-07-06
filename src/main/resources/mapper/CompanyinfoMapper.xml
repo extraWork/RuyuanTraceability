@@ -35,10 +35,10 @@
   
   <!-- 批量删除 -->
   <delete id="deleteByPrimaryKey">
-    delete from CompanyInfo
-    where CompanyId in
+    delete from CompanyInfo c join areainfo a
+    on c.CompanyId in
     <foreach  item='item' index='index' collection="companys" open="" close="" separator=",">
-    (#{companyid})
+    (#{companyid}) and c.areacode=a.areacode
     </foreach>
      
   </delete>
