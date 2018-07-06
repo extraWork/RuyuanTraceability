@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,6 +19,7 @@ import com.spring.domain.TreeNode;
 import com.spring.domain.UserInfo;
 import com.spring.service.ModuleService;
 import com.spring.service.UserManagerService;
+import com.spring.util.ObjectUtil;
 import com.spring.util.TreeUtil;
 
 @Controller
@@ -32,7 +34,15 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public String login(String loginName , String loginPWD , HttpServletRequest request){
+	public String login(String loginName , String loginPWD ,Model model ,  HttpServletRequest request){
+		if(ObjectUtil.isEmpty(loginName)) {
+			model.addAttribute("message", "用户名不能为空!");
+			return "login2";
+		}
+		if(ObjectUtil.isEmpty(loginPWD)) {
+			model.addAttribute("message", "密码不能为空!");
+			return "login2";
+		}
 		loginPWD = DigestUtils.md5Hex(loginPWD);
 		//查询用户信息
 		UserInfo user = userManagerService.login(loginName,loginPWD);

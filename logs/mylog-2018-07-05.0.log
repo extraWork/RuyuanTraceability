@@ -2321,3 +2321,865 @@ com.alibaba.druid.sql.parser.ParserException: TODO : EQ userCode
 2018-07-05 17:26:10 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
 2018-07-05 17:26:10 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
 2018-07-05 17:26:10 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:16:29 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 139044 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 21:16:29 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 21:16:29 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 21:16:31 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 21:16:31 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 21:16:31 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 21:16:31 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 21:16:32 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 21:16:32 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 21:16:32 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 21:16:32 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 21:16:32 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 21:16:32 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 21:16:33 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 21:16:34 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 21:16:34 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 21:16:34 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 21:16:34 com.spring.Application[57][INFO ]   Started Application in 6.148 seconds (JVM running for 6.676)
+2018-07-05 21:16:42 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 21:16:48 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:16:48 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:16:48 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:16:48 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:16:48 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:16:48 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:17:10 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==>  Preparing: select roleId, roleName, roleDesc, roleType from sys_role 
+2018-07-05 21:17:10 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:17:10 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   <==      Total: 4
+2018-07-05 21:17:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:17:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:17:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:18:00 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:18:00 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:18:00 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:19:10 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:19:10 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:19:10 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:19:10 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:19:10 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:19:10 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:19:13 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:19:13 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:19:13 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:20:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:20:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:20:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:20:25 com.spring.dao.ModuleDao.addModule[181][DEBUG]   ==>  Preparing: insert into sys_module(moduleId,modulename,moduleparent,moduleurl,moduleno,moduletype) values( MODULEID_seq.Nextval,?,?,?,?,?) 
+2018-07-05 21:20:25 com.spring.dao.ModuleDao.addModule[181][DEBUG]   ==> Parameters: 测试菜单(String), (String), (String), 4(String), 0(String)
+2018-07-05 21:20:25 com.spring.dao.ModuleDao.addModule[181][DEBUG]   <==    Updates: 1
+2018-07-05 21:20:25 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:20:25 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:20:25 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:20:37 com.spring.dao.ModuleDao.addModule[181][DEBUG]   ==>  Preparing: insert into sys_module(moduleId,modulename,moduleparent,moduleurl,moduleno,moduletype) values( MODULEID_seq.Nextval,?,?,?,?,?) 
+2018-07-05 21:20:37 com.spring.dao.ModuleDao.addModule[181][DEBUG]   ==> Parameters: 测试2级菜单(String), 18(String), (String), 1(String), 0(String)
+2018-07-05 21:20:37 com.spring.dao.ModuleDao.addModule[181][DEBUG]   <==    Updates: 1
+2018-07-05 21:20:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:20:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:20:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:20:39 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:20:39 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:20:39 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:34:51 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 131348 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 21:34:51 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 21:34:52 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 21:34:53 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 21:34:53 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 21:34:54 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 21:34:54 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 21:34:55 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 21:34:55 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 21:34:55 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 21:34:55 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 21:34:55 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 21:34:55 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 21:34:55 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 21:34:57 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 21:34:57 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 21:34:57 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 21:34:57 com.spring.Application[57][INFO ]   Started Application in 6.405 seconds (JVM running for 7.019)
+2018-07-05 21:35:03 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 21:35:03 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:35:03 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:35:03 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:35:03 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:35:03 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:35:03 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:35:07 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:35:07 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:35:07 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:35:10 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:35:10 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:35:10 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:35:18 com.spring.dao.ModuleDao.editSystemModule[181][DEBUG]   ==>  Preparing: UPDATE sys_module set moduleName = ? , MODULEPARENT = ?, MODULENO = ?, MODULETYPE = ? where moduleId = ? 
+2018-07-05 21:35:18 com.spring.dao.ModuleDao.editSystemModule[181][DEBUG]   ==> Parameters: 测试2级菜单修改(String), 18(String), 1(String), 0(String), 19(Integer)
+2018-07-05 21:35:18 com.spring.dao.ModuleDao.editSystemModule[181][DEBUG]   <==    Updates: 1
+2018-07-05 21:35:18 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:35:18 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:35:18 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:35:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:35:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:35:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:35:35 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:35:35 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 19(String)
+2018-07-05 21:35:35 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 0
+2018-07-05 21:45:07 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 141116 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 21:45:07 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 21:45:07 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 21:45:09 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 21:45:09 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 21:45:10 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 21:45:10 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 21:45:11 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 21:45:11 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 21:45:11 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 21:45:11 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 21:45:11 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 21:45:11 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 21:45:11 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 21:45:12 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 21:45:12 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 21:45:12 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 21:45:13 com.spring.Application[57][INFO ]   Started Application in 6.123 seconds (JVM running for 6.568)
+2018-07-05 21:45:25 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 21:45:26 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:45:26 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:45:26 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:45:26 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:45:26 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:45:26 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:45:34 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:45:34 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:45:34 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:45:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:45:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:45:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:45:38 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 
+2018-07-05 21:45:38 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:45:38 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 16
+2018-07-05 21:46:11 org.springframework.web.servlet.PageNotFound[215][WARN ]   Request method 'GET' not supported
+2018-07-05 21:46:16 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:46:16 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:46:16 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:46:16 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:46:16 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:46:16 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:46:18 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:46:18 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:46:18 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:46:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:46:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:46:20 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:46:21 org.springframework.web.servlet.PageNotFound[215][WARN ]   Request method 'GET' not supported
+2018-07-05 21:46:36 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:46:36 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:46:36 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:46:38 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:46:38 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:46:38 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:46:39 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:46:39 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 19(String)
+2018-07-05 21:46:39 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:47:15 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:47:15 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:47:15 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:47:16 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:47:16 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:47:16 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:47:17 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:47:17 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 19(String)
+2018-07-05 21:47:17 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:47:28 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:47:28 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 19(String)
+2018-07-05 21:47:28 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:47:44 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:47:44 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:47:44 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:47:46 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:47:46 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:47:46 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:47:47 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:47:47 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 19(String)
+2018-07-05 21:47:47 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:47:52 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:47:52 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 10(String)
+2018-07-05 21:47:52 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:47:54 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:47:54 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 12(String)
+2018-07-05 21:47:54 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:49:08 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 140296 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 21:49:08 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 21:49:09 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 21:49:10 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 21:49:10 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 21:49:11 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 21:49:11 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 21:49:12 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 21:49:12 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 21:49:13 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 21:49:13 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 21:49:13 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 21:49:13 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 21:49:13 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 21:49:14 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 21:49:14 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 21:49:14 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 21:49:14 com.spring.Application[57][INFO ]   Started Application in 6.931 seconds (JVM running for 7.473)
+2018-07-05 21:49:45 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 21:49:45 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:49:45 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:49:45 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:49:45 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:49:45 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:49:45 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:49:47 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:49:47 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:49:47 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:49:47 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:49:47 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:49:47 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:49:49 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:49:49 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:49:49 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:49:56 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:49:56 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 2(String)
+2018-07-05 21:49:56 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 6
+2018-07-05 21:49:59 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:49:59 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 6(String)
+2018-07-05 21:49:59 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:50:01 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:50:01 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 6(String)
+2018-07-05 21:50:01 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:50:04 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:50:04 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 5(String)
+2018-07-05 21:50:04 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:50:20 com.spring.dao.SysRoleMapper.findRoleByParam_COUNT[181][DEBUG]   ==>  Preparing: SELECT count(0) FROM sys_role 
+2018-07-05 21:50:20 com.spring.dao.SysRoleMapper.findRoleByParam_COUNT[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:50:20 com.spring.dao.SysRoleMapper.findRoleByParam_COUNT[181][DEBUG]   <==      Total: 1
+2018-07-05 21:50:20 com.spring.dao.SysRoleMapper.findRoleByParam[181][DEBUG]   ==>  Preparing: SELECT TMP_PAGE.*, ROWNUM ROW_ID FROM ( select roleId, roleName, roleDesc, roleType , roleCode from sys_role ) TMP_PAGE WHERE ROWNUM <= ? 
+2018-07-05 21:50:20 com.spring.dao.SysRoleMapper.findRoleByParam[181][DEBUG]   ==> Parameters: 10(Integer)
+2018-07-05 21:50:20 com.spring.dao.SysRoleMapper.findRoleByParam[181][DEBUG]   <==      Total: 4
+2018-07-05 21:50:23 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==>  Preparing: select roleId, roleName, roleDesc, roleType from sys_role 
+2018-07-05 21:50:23 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:50:23 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   <==      Total: 4
+2018-07-05 21:50:24 com.spring.dao.UserManagerDao.queryUserByParam_COUNT[181][DEBUG]   ==>  Preparing: SELECT count(0) FROM SYS_USER 
+2018-07-05 21:50:24 com.spring.dao.UserManagerDao.queryUserByParam_COUNT[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:50:24 com.spring.dao.UserManagerDao.queryUserByParam_COUNT[181][DEBUG]   <==      Total: 1
+2018-07-05 21:50:24 com.spring.dao.UserManagerDao.queryUserByParam[181][DEBUG]   ==>  Preparing: SELECT TMP_PAGE.*, ROWNUM ROW_ID FROM ( select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER ) TMP_PAGE WHERE ROWNUM <= ? 
+2018-07-05 21:50:24 com.spring.dao.UserManagerDao.queryUserByParam[181][DEBUG]   ==> Parameters: 10(Integer)
+2018-07-05 21:50:24 com.spring.dao.UserManagerDao.queryUserByParam[181][DEBUG]   <==      Total: 4
+2018-07-05 21:56:36 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 140728 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 21:56:36 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 21:56:36 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 21:56:38 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 21:56:38 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 21:56:38 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 21:56:38 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 21:56:40 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 21:56:40 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 21:56:40 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 21:56:40 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 21:56:40 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 21:56:40 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 21:56:40 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 21:56:41 org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext[550][WARN ]   Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'moduleController' method 
+public com.spring.domain.ModuleInfo com.spring.controller.ModuleController.findModuleById(java.lang.String)
+to {[/module/findModuleById],methods=[POST]}: There is already 'moduleController' bean method
+public void com.spring.controller.ModuleController.deleteModule(java.lang.String) mapped.
+2018-07-05 21:56:41 com.alibaba.druid.pool.DruidDataSource[1444][INFO ]   {dataSource-1} closed
+2018-07-05 21:56:41 org.springframework.boot.SpringApplication[815][ERROR]   Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'moduleController' method 
+public com.spring.domain.ModuleInfo com.spring.controller.ModuleController.findModuleById(java.lang.String)
+to {[/module/findModuleById],methods=[POST]}: There is already 'moduleController' bean method
+public void com.spring.controller.ModuleController.deleteModule(java.lang.String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.spring.Application.main(Application.java:26)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'moduleController' method 
+public com.spring.domain.ModuleInfo com.spring.controller.ModuleController.findModuleById(java.lang.String)
+to {[/module/findModuleById],methods=[POST]}: There is already 'moduleController' bean method
+public void com.spring.controller.ModuleController.deleteModule(java.lang.String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:576)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:540)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:264)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:214)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 16 common frames omitted
+2018-07-05 21:57:15 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 141968 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 21:57:15 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 21:57:15 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 21:57:17 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 21:57:17 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 21:57:18 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 21:57:18 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 21:57:19 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 21:57:19 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 21:57:19 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 21:57:19 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 21:57:19 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 21:57:19 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 21:57:19 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 21:57:20 org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext[550][WARN ]   Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'moduleController' method 
+public com.spring.domain.ModuleInfo com.spring.controller.ModuleController.findModuleById(java.lang.String)
+to {[/module/findModuleById],methods=[POST]}: There is already 'moduleController' bean method
+public java.lang.String com.spring.controller.ModuleController.deleteModule(java.lang.String) mapped.
+2018-07-05 21:57:21 com.alibaba.druid.pool.DruidDataSource[1444][INFO ]   {dataSource-1} closed
+2018-07-05 21:57:21 org.springframework.boot.SpringApplication[815][ERROR]   Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'moduleController' method 
+public com.spring.domain.ModuleInfo com.spring.controller.ModuleController.findModuleById(java.lang.String)
+to {[/module/findModuleById],methods=[POST]}: There is already 'moduleController' bean method
+public java.lang.String com.spring.controller.ModuleController.deleteModule(java.lang.String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
+	at com.spring.Application.main(Application.java:26)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'moduleController' method 
+public com.spring.domain.ModuleInfo com.spring.controller.ModuleController.findModuleById(java.lang.String)
+to {[/module/findModuleById],methods=[POST]}: There is already 'moduleController' bean method
+public java.lang.String com.spring.controller.ModuleController.deleteModule(java.lang.String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:576)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:540)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:264)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:214)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 16 common frames omitted
+2018-07-05 21:58:00 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 120740 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 21:58:00 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 21:58:01 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 21:58:02 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 21:58:02 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 21:58:03 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 21:58:03 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 21:58:04 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 21:58:04 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 21:58:04 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 21:58:04 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 21:58:04 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 21:58:04 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 21:58:04 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 21:58:06 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 21:58:06 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 21:58:06 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 21:58:06 com.spring.Application[57][INFO ]   Started Application in 6.235 seconds (JVM running for 6.716)
+2018-07-05 21:58:18 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 21:58:23 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 21:58:23 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 21:58:23 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 21:58:23 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 21:58:23 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 21:58:23 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 21:58:26 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:58:26 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:58:26 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:58:27 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:58:27 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:58:27 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 1
+2018-07-05 21:58:30 com.spring.dao.ModuleDao.deleteModule[181][DEBUG]   ==>  Preparing: delete sys_module where moduleId = ? 
+2018-07-05 21:58:30 com.spring.dao.ModuleDao.deleteModule[181][DEBUG]   ==> Parameters: 19(String)
+2018-07-05 21:58:30 com.spring.dao.ModuleDao.deleteModule[181][DEBUG]   <==    Updates: 1
+2018-07-05 21:58:30 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:58:30 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:58:30 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 4
+2018-07-05 21:58:32 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:58:32 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:58:32 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 0
+2018-07-05 21:58:34 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType,(select modulename from sys_module where moduleId = t.moduleParent) as moduleParentName from sys_module t where moduleId = ? 
+2018-07-05 21:58:34 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:58:34 com.spring.dao.ModuleDao.findModuleById[181][DEBUG]   <==      Total: 1
+2018-07-05 21:58:37 com.spring.dao.ModuleDao.deleteModule[181][DEBUG]   ==>  Preparing: delete sys_module where moduleId = ? 
+2018-07-05 21:58:37 com.spring.dao.ModuleDao.deleteModule[181][DEBUG]   ==> Parameters: 18(String)
+2018-07-05 21:58:37 com.spring.dao.ModuleDao.deleteModule[181][DEBUG]   <==    Updates: 1
+2018-07-05 21:58:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:58:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:58:37 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:59:47 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:59:47 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:59:47 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:59:48 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:59:48 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:59:48 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:59:48 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:59:48 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:59:48 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:59:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent=? 
+2018-07-05 21:59:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 10(String)
+2018-07-05 21:59:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 21:59:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 21:59:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 21:59:50 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 22:00:08 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 22:00:08 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 22:00:08 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 22:00:15 com.spring.dao.SysRoleMapper.findRoleByParam_COUNT[181][DEBUG]   ==>  Preparing: SELECT count(0) FROM sys_role 
+2018-07-05 22:00:15 com.spring.dao.SysRoleMapper.findRoleByParam_COUNT[181][DEBUG]   ==> Parameters: 
+2018-07-05 22:00:15 com.spring.dao.SysRoleMapper.findRoleByParam_COUNT[181][DEBUG]   <==      Total: 1
+2018-07-05 22:00:15 com.spring.dao.SysRoleMapper.findRoleByParam[181][DEBUG]   ==>  Preparing: SELECT TMP_PAGE.*, ROWNUM ROW_ID FROM ( select roleId, roleName, roleDesc, roleType , roleCode from sys_role ) TMP_PAGE WHERE ROWNUM <= ? 
+2018-07-05 22:00:15 com.spring.dao.SysRoleMapper.findRoleByParam[181][DEBUG]   ==> Parameters: 10(Integer)
+2018-07-05 22:00:15 com.spring.dao.SysRoleMapper.findRoleByParam[181][DEBUG]   <==      Total: 4
+2018-07-05 22:00:23 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 22:00:23 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 22:00:23 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 22:00:23 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 22:00:23 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 22:00:23 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 22:16:26 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 71312 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 22:16:26 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 22:16:26 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 22:16:28 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 22:16:28 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 22:16:29 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 22:16:29 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 22:16:30 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 22:16:30 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 22:16:30 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 22:16:30 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 22:16:30 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 22:16:31 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 22:16:31 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 22:16:32 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 22:16:32 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 22:16:33 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 22:16:33 com.spring.Application[57][INFO ]   Started Application in 7.375 seconds (JVM running for 7.869)
+2018-07-05 22:16:33 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 22:16:39 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet][181][ERROR]   Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at java.security.MessageDigest.update(MessageDigest.java:335)
+	at java.security.MessageDigest.digest(MessageDigest.java:410)
+	at org.apache.commons.codec.digest.DigestUtils.md5(DigestUtils.java:260)
+	at org.apache.commons.codec.digest.DigestUtils.md5(DigestUtils.java:285)
+	at org.apache.commons.codec.digest.DigestUtils.md5Hex(DigestUtils.java:321)
+	at com.spring.controller.LoginController.login(LoginController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-05 22:16:39 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 22:16:39 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 22:16:39 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 22:16:39 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 22:16:39 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 22:16:39 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 22:19:27 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet][181][ERROR]   Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at java.security.MessageDigest.update(MessageDigest.java:335)
+	at java.security.MessageDigest.digest(MessageDigest.java:410)
+	at org.apache.commons.codec.digest.DigestUtils.md5(DigestUtils.java:260)
+	at org.apache.commons.codec.digest.DigestUtils.md5(DigestUtils.java:285)
+	at org.apache.commons.codec.digest.DigestUtils.md5Hex(DigestUtils.java:321)
+	at com.spring.controller.LoginController.login(LoginController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-05 22:19:27 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 22:19:27 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: (String), d41d8cd98f00b204e9800998ecf8427e(String)
+2018-07-05 22:19:27 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 0
+2018-07-05 22:19:27 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet][181][ERROR]   Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.spring.controller.LoginController.login(LoginController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-05 22:20:58 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 139308 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 22:20:58 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 22:20:58 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 22:21:00 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 22:21:00 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 22:21:01 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 22:21:01 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 22:21:02 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 22:21:02 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 22:21:03 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 22:21:03 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 22:21:03 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 22:21:03 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 22:21:03 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 22:21:04 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 22:21:04 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 22:21:04 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 22:21:05 com.spring.Application[57][INFO ]   Started Application in 7.4 seconds (JVM running for 7.968)
+2018-07-05 22:21:22 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 22:21:28 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 22:21:28 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 22:21:28 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 22:21:28 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 22:21:28 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 22:21:28 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 22:21:38 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 22:21:38 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 22:21:38 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 22:21:38 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 22:21:38 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 22:21:38 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 22:23:41 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 87272 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 22:23:41 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 22:23:41 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 22:23:43 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 22:23:43 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 22:23:44 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 22:23:44 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 22:23:45 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 22:23:45 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 22:23:45 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 22:23:45 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 22:23:45 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 22:23:45 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 22:23:45 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 22:23:47 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 22:23:47 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 22:23:47 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 22:23:47 com.spring.Application[57][INFO ]   Started Application in 7.423 seconds (JVM running for 7.965)
+2018-07-05 22:23:51 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 22:23:55 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 22:23:55 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 22:23:56 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 22:23:56 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 22:23:56 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 22:23:56 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 22:24:02 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==>  Preparing: select roleId, roleName, roleDesc, roleType from sys_role 
+2018-07-05 22:24:02 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==> Parameters: 
+2018-07-05 22:24:02 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   <==      Total: 4
+2018-07-05 22:24:08 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==>  Preparing: select roleId, roleName, roleDesc, roleType from sys_role 
+2018-07-05 22:24:08 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==> Parameters: 
+2018-07-05 22:24:08 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   <==      Total: 4
+2018-07-05 22:24:09 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 22:24:09 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 22:24:09 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 22:28:59 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 144804 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 22:28:59 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 22:28:59 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 22:29:01 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 22:29:01 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 22:29:02 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 22:29:02 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 22:29:03 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 22:29:03 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 22:29:03 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 22:29:03 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 22:29:03 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 22:29:03 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 22:29:03 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 22:29:05 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 22:29:05 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 22:29:05 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 22:29:05 com.spring.Application[57][INFO ]   Started Application in 7.135 seconds (JVM running for 7.891)
+2018-07-05 22:29:26 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 22:41:55 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 146168 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 22:41:55 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 22:41:56 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 22:41:58 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 22:41:58 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 22:41:58 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 22:41:58 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 22:41:59 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 22:42:00 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 22:42:00 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 22:42:00 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 22:42:00 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 22:42:00 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 22:42:00 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 22:42:01 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 22:42:01 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 22:42:02 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 22:42:02 com.spring.Application[57][INFO ]   Started Application in 6.89 seconds (JVM running for 7.432)
+2018-07-05 22:44:26 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 23:42:38 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 23:42:38 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 23:42:38 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 23:42:38 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 23:42:38 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 23:42:38 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 23:42:59 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==>  Preparing: select roleId, roleName, roleDesc, roleType from sys_role 
+2018-07-05 23:42:59 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   ==> Parameters: 
+2018-07-05 23:42:59 com.spring.dao.SysRoleMapper.selectAll[181][DEBUG]   <==      Total: 4
+2018-07-05 23:42:59 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==>  Preparing: select * from SYS_MODULE WHERE 1=1 and moduleParent is null 
+2018-07-05 23:42:59 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   ==> Parameters: 
+2018-07-05 23:42:59 com.spring.dao.ModuleDao.queryModule[181][DEBUG]   <==      Total: 3
+2018-07-05 23:55:02 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 122292 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 23:55:02 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 23:55:02 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 23:55:04 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 23:55:04 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 23:55:04 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 23:55:04 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 23:55:05 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 23:55:05 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 23:55:06 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 23:55:06 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 23:55:06 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 23:55:06 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 23:55:06 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 23:55:07 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 23:55:07 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 23:55:07 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 23:55:07 com.spring.Application[57][INFO ]   Started Application in 6.55 seconds (JVM running for 7.094)
+2018-07-05 23:55:07 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-05 23:55:12 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==>  Preparing: select USERID,USERCODE,userPWD,USERNAME,TELEPHONE,EMAIL,flag,COMPANYNAME,COMPANYID,IDENTIFYNO,ROLENAME,ROLEID,createDate from SYS_USER where userCode=? and userPWD=? 
+2018-07-05 23:55:13 com.spring.dao.UserManagerDao.login[181][DEBUG]   ==> Parameters: test(String), 098f6bcd4621d373cade4e832627b4f6(String)
+2018-07-05 23:55:13 com.spring.dao.UserManagerDao.login[181][DEBUG]   <==      Total: 1
+2018-07-05 23:55:13 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==>  Preparing: select moduleId,moduleName,moduleParent,moduleURL,moduleNo,moduleType from SYS_MODULE sm inner join sys_permission sp on sm.moduleid = sp.modelid where sp.roleid = ? order by moduleparent desc , moduleNo 
+2018-07-05 23:55:13 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   ==> Parameters: 5(Integer)
+2018-07-05 23:55:13 com.spring.dao.ModuleDao.findModuleByRoleId[181][DEBUG]   <==      Total: 14
+2018-07-05 23:57:45 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 153948 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 23:57:45 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 23:57:45 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 23:57:47 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 23:57:47 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 23:57:48 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 23:57:48 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 23:57:49 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 23:57:49 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 23:57:49 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 23:57:49 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 23:57:49 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 23:57:50 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 23:57:50 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 23:57:52 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 23:57:52 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 23:57:52 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 23:57:52 com.spring.Application[57][INFO ]   Started Application in 7.527 seconds (JVM running for 8.561)
+2018-07-05 23:58:06 com.spring.Application[48][INFO ]   Starting Application on Patience-l with PID 154452 (E:\myWorkSpace\extraWork\RuyuanTraceability\target\classes started by Fantasyo in E:\myWorkSpace\extraWork\RuyuanTraceability)
+2018-07-05 23:58:06 com.spring.Application[637][INFO ]   No active profile set, falling back to default profiles: default
+2018-07-05 23:58:06 org.hibernate.validator.internal.util.Version[30][INFO ]   HV000001: Hibernate Validator 5.3.4.Final
+2018-07-05 23:58:09 org.apache.catalina.core.StandardService[179][INFO ]   Starting service Tomcat
+2018-07-05 23:58:09 org.apache.catalina.core.StandardEngine[179][INFO ]   Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-07-05 23:58:09 org.apache.jasper.servlet.TldScanner[179][INFO ]   At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-07-05 23:58:09 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][179][INFO ]   Initializing Spring embedded WebApplicationContext
+2018-07-05 23:58:10 com.alibaba.druid.pool.DruidDataSource[715][INFO ]   {dataSource-1} inited
+2018-07-05 23:58:11 org.hibernate.jpa.internal.util.LogHelper[31][INFO ]   HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-07-05 23:58:11 org.hibernate.Version[37][INFO ]   HHH000412: Hibernate Core {5.0.11.Final}
+2018-07-05 23:58:11 org.hibernate.cfg.Environment[213][INFO ]   HHH000206: hibernate.properties not found
+2018-07-05 23:58:11 org.hibernate.cfg.Environment[317][INFO ]   HHH000021: Bytecode provider name : javassist
+2018-07-05 23:58:11 org.hibernate.annotations.common.Version[66][INFO ]   HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-07-05 23:58:11 org.hibernate.dialect.Dialect[156][INFO ]   HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+2018-07-05 23:58:13 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Initializing ProtocolHandler ["http-nio-80"]
+2018-07-05 23:58:13 org.apache.coyote.http11.Http11NioProtocol[179][INFO ]   Starting ProtocolHandler [http-nio-80]
+2018-07-05 23:58:13 org.apache.tomcat.util.net.NioSelectorPool[179][INFO ]   Using a shared selector for servlet write/read
+2018-07-05 23:58:13 com.spring.Application[57][INFO ]   Started Application in 7.75 seconds (JVM running for 8.378)
